@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           ],
         ),
         body: Padding(
-          padding: const EdgeInsets.only(left: 40,top: 30,right: 60),
+          padding: const EdgeInsets.only(left: 40, top: 30, right: 60),
           child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -53,7 +53,9 @@ class MyApp extends StatelessWidget {
                 "First Text",
                 style: TextStyle(fontSize: 30),
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
