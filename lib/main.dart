@@ -36,37 +36,31 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.only(left: 40, top: 30, right: 60),
-          child: const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(
+        body: Column(
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 50),
+              child: Text(
                 "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development.",
                 style: TextStyle(fontSize: 30),
               ),
-              SizedBox(
-                height: 40,
-              ),
-              Text(
-                "First Text",
-                style: TextStyle(fontSize: 30),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(Icons.thumb_up),
-                  Icon(Icons.thumb_up),
-                  Icon(Icons.thumb_up),
-                  Icon(Icons.thumb_up),
-                ],
-              )
-            ],
-          ),
+            ),
+            Text(
+              "Second Text",
+              style: TextStyle(fontSize: 30),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(Icons.thumb_up),
+                Icon(Icons.thumb_up),
+                Icon(Icons.thumb_up),
+                Icon(Icons.thumb_up),
+              ],
+            )
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
