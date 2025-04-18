@@ -44,7 +44,7 @@ SizedBox(height: 10,),
               filled: true,
 
               fillColor: Colors.blue.withOpacity(0.3),
-              focusedBorder: OutlineInputBorder(
+              border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.blue, width: 3)),
               enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(40),
