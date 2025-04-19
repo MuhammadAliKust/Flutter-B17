@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'package:string_validator/string_validator.dart';
 class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+  LoginView({super.key});
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController pwdController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +15,8 @@ class LoginView extends StatelessWidget {
       body: Column(
         children: [
           TextField(
-            enabled: false,
+            controller: emailController,
+            // enabled: false,
             maxLines: 1,
             decoration: InputDecoration(
               label: Text("Email"),
@@ -36,7 +40,8 @@ class LoginView extends StatelessWidget {
           ),
           TextField(
             maxLines: 1,
-            obscureText: true,
+            controller: pwdController,
+            // obscureText: true,
             decoration: InputDecoration(
               label: Text("Password"),
               hintText: 'Password must be 6 or more characters',
@@ -57,7 +62,31 @@ class LoginView extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          ElevatedButton(onPressed: () {}, child: Text("Login"))
+          ElevatedButton(
+              onPressed: () {
+                if (emailController.text.isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text("Eamil cannot be empty.")));
+                  return;
+                }
+                if(!emailController.text.isEmail){
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text("Kindly enter valid email.")));
+                  return;
+
+                }
+                if (pwdController.text.isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text("Password cannot be empty.")));
+                  return;
+                }
+                if (pwdController.text.length < 6) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text("Password must be 6 or more characters.")));
+                  return;
+                }
+              },
+              child: Text("Login"))
         ],
       ),
     );
