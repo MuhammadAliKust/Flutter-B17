@@ -20,7 +20,6 @@ class LoginView extends StatelessWidget {
               prefixIcon: Icon(Icons.email),
               suffixIcon: Icon(Icons.email),
               filled: true,
-
               fillColor: Colors.blue.withOpacity(0.3),
               focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.blue, width: 3)),
@@ -32,7 +31,9 @@ class LoginView extends StatelessWidget {
                   borderSide: BorderSide(color: Colors.blue, width: 3)),
             ),
           ),
-SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           TextField(
             maxLines: 1,
             obscureText: true,
@@ -42,7 +43,6 @@ SizedBox(height: 10,),
               prefixIcon: Icon(Icons.lock),
               suffixIcon: Icon(Icons.visibility),
               filled: true,
-
               fillColor: Colors.blue.withOpacity(0.3),
               border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.blue, width: 3)),
@@ -54,8 +54,10 @@ SizedBox(height: 10,),
                   borderSide: BorderSide(color: Colors.blue, width: 3)),
             ),
           ),
-          SizedBox(height: 20,),
-          ElevatedButton(onPressed: (){}, child: Text("Login"))
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(onPressed: () {}, child: Text("Login"))
         ],
       ),
     );
