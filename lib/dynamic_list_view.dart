@@ -27,11 +27,11 @@ class _DynamicListViewState extends State<DynamicListView> {
           title: Text("Dynamic List View Demo"),
         ),
         body: ListView.builder(
-            itemCount: notificationList.length,
+            itemCount: 5,
             itemBuilder: (context, i) {
               return Card(
                 elevation: 10,
-                color: Colors.white,
+                color: Colors.blue,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 child: ListTile(
