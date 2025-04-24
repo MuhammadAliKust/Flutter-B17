@@ -28,18 +28,21 @@ class PageViewDemo extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: PageView.builder(
-                controller: controller,
-                scrollDirection: Axis.horizontal,
-                itemCount: onBoardingList.length,
-                itemBuilder: (context, i) {
-                  return Column(
-                    children: [
-                      Image.asset(onBoardingList[i].image),
-                      Text(onBoardingList[i].title.toString())
-                    ],
-                  );
-                }),
+            child: Container(
+              color: Colors.blue,
+              child: PageView.builder(
+                  controller: controller,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: onBoardingList.length,
+                  itemBuilder: (context, i) {
+                    return Column(
+                      children: [
+                        Image.asset(onBoardingList[i].image),
+                        Text(onBoardingList[i].title.toString())
+                      ],
+                    );
+                  }),
+            ),
           ),
           SmoothPageIndicator(
               controller: controller, // PageController
@@ -47,8 +50,8 @@ class PageViewDemo extends StatelessWidget {
               effect: ExpandingDotsEffect(), // your preferred effect
               onDotClicked: (index) {}),
           SizedBox(
-            height: 100,
-          )
+            height: 150,
+          ),
         ],
       ),
     );
