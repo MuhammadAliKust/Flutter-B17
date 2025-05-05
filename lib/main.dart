@@ -5,6 +5,7 @@ import 'package:flutter_b17/grid_view.dart';
 import 'package:flutter_b17/multiple_selection.dart';
 import 'package:flutter_b17/page_view_demo.dart';
 import 'package:flutter_b17/single_selection.dart';
+import 'package:flutter_b17/tabbar_view.dart';
 
 import 'bottom_bar.dart';
 import 'list_view_demo.dart';
@@ -20,8 +21,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home: BottomBarDemo(),
+    return MaterialApp(
+      home: TabbarViewDemo(),
     );
   }
 }
