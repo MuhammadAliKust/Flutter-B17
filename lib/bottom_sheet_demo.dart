@@ -7,7 +7,7 @@ class BottomSheetDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bottom Sheet Demo"),
+        title: const Text("Bottom Sheet Demo"),
       ),
       body: Center(
         child: ElevatedButton(
@@ -18,14 +18,14 @@ class BottomSheetDemo extends StatelessWidget {
                     return Container(
                       width: MediaQuery.of(context).size.width,
                       height: 200,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               topRight: Radius.circular(20))),
                       child: Column(
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Container(
@@ -40,7 +40,7 @@ class BottomSheetDemo extends StatelessWidget {
                     );
                   });
             },
-            child: Text("Show Bottom Sheet")),
+            child: const Text("Show Bottom Sheet")),
       ),
     );
   }
