@@ -5,6 +5,7 @@ import 'package:flutter_b17/dynamic_list_view.dart';
 import 'package:flutter_b17/grid_view.dart';
 import 'package:flutter_b17/multiple_selection.dart';
 import 'package:flutter_b17/page_view_demo.dart';
+import 'package:flutter_b17/screen_a.dart';
 import 'package:flutter_b17/single_selection.dart';
 import 'package:flutter_b17/tabbar_view.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BottomSheetDemo(),
+      home: ScreenAView(),
     );
   }
 }
