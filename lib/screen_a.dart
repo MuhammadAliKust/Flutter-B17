@@ -17,8 +17,12 @@ class ScreenAView extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () {
               userProvider.setName('Basit');
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ScreenBView()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ScreenBView(
+                            name: '',
+                          )));
             },
             child: Text("Go to Screen B")),
       ),
